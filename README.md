@@ -1,5 +1,8 @@
 # Personal Portfolio Website
-
+Link github:
+https://github.com/hoandeptrai123/Personal-Portfolio
+Link deploy:
+https://elaborate-dieffenbachia-a46e1a.netlify.app/
 A modern, responsive personal portfolio website showcasing web development projects, skills, and blog posts.
 
 ## Site Map
