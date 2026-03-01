@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Nguyễn Đăng Hoan - Get in touch for web development projects and collaborations">
+    <title>Contact - Nguyễn Đăng Hoan Portfolio</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <header>
+        <nav>
+            <div>
+                <h1>Nguyễn Đăng Hoan</h1>
+            </div>
+            <ul>
+                <li><a href="portfolio-index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="map.html">Map</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section>
+            <h1>Contact Me</h1>
+            <p>Feel free to reach out for collaborations, questions, or just to say hello!</p>
+        </section>
+
+        <section>
+            <form action="#" method="post" novalidate>
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    
+                    <div class="form-group">
+                        <label for="name">Full Name <span aria-label="required">*</span></label>
+                        <input type="text" id="name" name="name" required 
+                               pattern="[A-Za-z\s]{2,50}" 
+                               title="Please enter a valid name (2-50 characters, letters only)"
+                               aria-required="true">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address <span aria-label="required">*</span></label>
+                        <input type="email" id="email" name="email" required 
+                               aria-required="true"
+                               placeholder="your.email@example.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tel">Phone Number</label>
+                        <input type="tel" id="tel" name="tel" 
+                               pattern="[0-9\s\-\+\(\)]{10,20}"
+                               title="Please enter a valid phone number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password (for account creation)</label>
+                        <input type="password" id="password" name="password" 
+                               minlength="8"
+                               title="Password must be at least 8 characters">
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Project Details</legend>
+                    
+                    <div class="form-group">
+                        <label for="project-type">Project Type</label>
+                        <select id="project-type" name="project-type">
+                            <optgroup label="Web Development">
+                                <option value="website">Website</option>
+                                <option value="webapp">Web Application</option>
+                                <option value="ecommerce">E-commerce</option>
+                            </optgroup>
+                            <optgroup label="Other">
+                                <option value="consulting">Consulting</option>
+                                <option value="other">Other</option>
+                            </optgroup>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="budget">Budget Range</label>
+                        <input type="number" id="budget" name="budget" 
+                               min="0" max="1000000" step="100"
+                               placeholder="Enter budget amount">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="deadline">Preferred Deadline</label>
+                        <input type="date" id="deadline" name="deadline" 
+                               min="2024-03-01">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="priority">Project Priority</label>
+                        <input type="range" id="priority" name="priority" 
+                               min="1" max="10" value="5" step="1">
+                        <output for="priority" id="priority-output">5</output>
+                        <script>
+                            document.getElementById('priority').addEventListener('input', function(e) {
+                                document.getElementById('priority-output').value = e.target.value;
+                            });
+                        </script>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="color">Preferred Color Scheme</label>
+                        <input type="color" id="color" name="color" value="#3498db">
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Additional Information</legend>
+                    
+                    <div class="form-group">
+                        <label for="message">Message <span aria-label="required">*</span></label>
+                        <textarea id="message" name="message" rows="6" required 
+                                  aria-required="true"
+                                  placeholder="Tell me about your project..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="file">Upload Project Brief (Optional)</label>
+                        <input type="file" id="file" name="file" 
+                               accept=".pdf,.doc,.docx,.txt">
+                    </div>
+
+                    <div class="form-group">
+                        <label>How did you hear about me?</label>
+                        <div class="radio-group">
+                            <label>
+                                <input type="radio" name="source" value="google" required>
+                                Google Search
+                            </label>
+                            <label>
+                                <input type="radio" name="source" value="social">
+                                Social Media
+                            </label>
+                            <label>
+                                <input type="radio" name="source" value="referral">
+                                Referral
+                            </label>
+                            <label>
+                                <input type="radio" name="source" value="other">
+                                Other
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Services Needed (Select all that apply)</label>
+                        <div class="checkbox-group">
+                            <label>
+                                <input type="checkbox" name="services" value="design">
+                                Web Design
+                            </label>
+                            <label>
+                                <input type="checkbox" name="services" value="development">
+                                Web Development
+                            </label>
+                            <label>
+                                <input type="checkbox" name="services" value="seo">
+                                SEO Optimization
+                            </label>
+                            <label>
+                                <input type="checkbox" name="services" value="maintenance">
+                                Maintenance & Support
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="datalist-input">Technology Preference</label>
+                        <input type="text" id="datalist-input" name="tech" 
+                               list="tech-list" placeholder="Select or type technology">
+                        <datalist id="tech-list">
+                            <option value="React">
+                            <option value="Vue.js">
+                            <option value="Angular">
+                            <option value="HTML/CSS/JavaScript">
+                            <option value="WordPress">
+                        </datalist>
+                    </div>
+
+                    <input type="hidden" name="form-token" value="contact-form-2024">
+                </fieldset>
+
+                <div class="form-group">
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset Form</button>
+                </div>
+            </form>
+        </section>
+
+        <section>
+            <h2>Other Ways to Reach Me</h2>
+            <address>
+                <p>Email: <a href="mailto:ititiu23006@student.edu.vn">ititiu23006@student.edu.vn</a></p>
+                <p>Phone: <a href="tel:+1234567890">(123) 456-7890</a></p>
+                <p>Address: 123 Phạm Văn Đồng, HMCIU, ST 12345</p>
+            </address>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Nguyễn Đăng Hoan. All rights reserved.</p>
+        <p><a href="policy.html">Privacy Policy</a> | <a href="contact.html">Contact</a></p>
+    </footer>
+</body>
+</html>
+
